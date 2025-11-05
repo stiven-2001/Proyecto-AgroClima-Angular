@@ -9,22 +9,19 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
+  // Obtener datos
   get(endpoint: string) {
     return this.http.get(`${this.baseUrl}/${endpoint}`);
   }
 
+  // Crear datos
   post(endpoint: string, data: any) {
     return this.http.get(`${this.baseUrl}/${endpoint}`, data);
   }
 
+  //Actualizar o eliminar lógicamente
   put(endpoint: string, data: any) {
     return this.http.get(`${this.baseUrl}/${endpoint}`, data);
   }
-
-  delete(endpoint: string) {
-    return this.http.get(`${this.baseUrl}/${endpoint}`); 
-  }
-
-
 
 }
